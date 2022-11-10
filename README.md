@@ -1,2 +1,2 @@
 # HeeBeet
-A website with various of simple and fun widgets made with vanilla Javascript.
+A website with various simple and fun widgets made with vanilla Javascript.
