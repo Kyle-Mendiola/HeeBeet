@@ -1,40 +1,75 @@
 * {
   margin: 0;
   padding: 0;
+  /* outline: 1px solid red; */
 }
 
 html,
 body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-background-color: rgb(125, 172, 113);
+  background-color: rgb(125, 172, 113);
 }
 
-p.title{
-    background-color: rgb(114, 231, 85);
-    font-size: 2em;
-    color: rgb(43, 117, 25);
-    font-weight: bolder;
-    text-align: center;
+p.title {
+  background-color: rgb(114, 231, 85);
+  font-size: 2em;
+  color: rgb(43, 117, 25);
+  font-weight: bolder;
+  text-align: center;
 }
 
-div.landing-div{
-    background-color: rgb(111, 190, 91);
-    text-align: center;
-    padding: 20% 0;
+div.landing-div {
+  background-color: rgb(111, 190, 91);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 70vh;
 }
 
-div.landing-div p{
-    color: white;
+div.landing-div p {
+  color: white;
 }
 
-div.landing-div p:first-child{
-    font-size: 3em;
+div.landing-div p:first-child {
+  font-size: 3em;
 }
 
-div.section p.section-title{
-    border-bottom: 2px solid black;
-    padding-bottom: 10px;
-    margin: 10px 20px;
-    text-align: center;
+div.section {
+  margin: 0 2%;
+}
+
+p.section-title {
+  color: white;
+  border-bottom: 2px solid white;
+  padding-bottom: 10px;
+  margin: 10px 20px;
+  text-align: center;
+}
+
+div.section-widgets {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: 150px;
+}
+
+.section-widgets .widget {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+div.widget .icon {
+  background: white;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+}
+
+div.widget .widget-name {
+  text-align: center;
+  color: white;
 }
