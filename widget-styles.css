@@ -1,0 +1,20 @@
+.canvas {
+  background: white;
+  height: 30vh;
+  padding: 10px;
+}
+
+.canvas .text-input {
+  display: block;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.canvas button.scramble {
+  display: block;
+  margin: 10px auto;
+}
+
+.canvas p.output{
+    text-align: center;
+}

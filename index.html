@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <title>Document</title>
+    <link rel="stylesheet" href="widget-styles.css" />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <title>Heebeet</title>
   </head>
   <body>
     <script src="jquery.js"></script>
@@ -16,12 +18,22 @@
       <p>Scroll down to try out my selection of widgets</p>
     </div>
     <div class="section">
-      <p class="section-title">Text manipulators</p>
+      <p class="section-title" id="text-manipulators">Text manipulators</p>
+      <div class="canvas">
+        <p class="name">Scrambler</p>
+        <input
+          class="text-input"
+          type="text"
+          placeholder="Input your text here"
+        />
+        <button class="scramble">Scramble</button>
+        <p class="output">Output: <span class="output"></span></p>
+      </div>
       <div class="section-widgets">
-        <a href="https://kyle-mendiola.github.io/ProjectScreen/" class="widget">
+        <button class="widget">
           <div class="icon"></div>
-          <p class="widget-name">Name</p>
-        </a>
+          <p class="widget-name">Scrambler</p>
+        </button>
         <a href="https://kyle-mendiola.github.io/Sudoku/" class="widget">
           <div class="icon"></div>
           <p class="widget-name">Name</p>
@@ -42,8 +54,17 @@
           <div class="icon"></div>
           <p class="widget-name">Name</p>
         </a>
-        
       </div>
     </div>
+    <footer>
+      <p>Credits:</p>
+      <a
+        href="https://www.flaticon.com/free-icons/letter-h"
+        title="letter h icons"
+      >
+      <img src="favicon.png" />Website icon : Letter h icons created by Agung
+        Rama - Flaticon</a
+      >
+    </footer>
   </body>
 </html>

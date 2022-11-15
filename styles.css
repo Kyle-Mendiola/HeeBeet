@@ -54,12 +54,23 @@ div.section-widgets {
   grid-auto-rows: 150px;
 }
 
-.section-widgets .widget {
+.widget {
   display: flex;
   flex-direction: column;
   justify-content: center;
   border-radius: 10px;
   margin: 0 auto;
+}
+
+button.widget {
+  background: rgb(125, 172, 113);
+  border: none;
+  font-size: 16px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+}
+
+a.widget {
   text-decoration: none;
 }
 
@@ -73,4 +84,36 @@ div.section-widgets {
 .widget .widget-name {
   text-align: center;
   color: white;
+}
+
+footer{
+  margin-top: 20em;
+  height: 75px;
+  padding: 60px 25px;
+  background: rgb(111, 190, 91);
+  color: white;
+}
+
+footer p{
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+footer a{
+  position: relative;
+  display: block;
+  margin: 10px auto;
+  margin-left: 3em;
+  width: 100%;
+  color: white;
+}
+
+footer a img{
+  background-color: white;
+  width: 20px;
+  border-radius: 50%;
+  padding-right: 2px;
+  position: absolute;
+  top: 2px;
+  left: -25px;
 }
