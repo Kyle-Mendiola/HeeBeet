@@ -4,21 +4,23 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="widget-styles.css" />
-    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/widget-styles.css" />
+    <link rel="shortcut icon" href="./public/favicon.png" type="image/x-icon" />
     <title>Heebeet</title>
   </head>
   <body>
-    <script src="jquery.js"></script>
-    <script src="script.js"></script>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/utils.js"></script>
+    <script src="./js/components.js"></script>
+    <script src="./js/script.js"></script>
     <p class="title">HEEBEET</p>
     <div class="landing-div">
       <p>Welcome to HeeBeet!</p>
       <p>Scroll down to try out my selection of widgets</p>
     </div>
-    <div class="section">
-      <p class="section-title" id="text-manipulators">Text manipulators</p>
+    <div class="section" id="text-manipulators">
+      <p class="section-title">Text manipulators</p>
       <div class="canvas">
         <p class="name">Scrambler</p>
         <input
@@ -33,6 +35,10 @@
         <button class="widget">
           <div class="icon"></div>
           <p class="widget-name">Scrambler</p>
+        </button>
+        <button class="widget">
+          <div class="icon"></div> 
+          <p class="widget-name">Case</p>
         </button>
         <a href="https://kyle-mendiola.github.io/Sudoku/" class="widget">
           <div class="icon"></div>

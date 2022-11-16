@@ -88,7 +88,7 @@ a.widget {
 
 footer{
   margin-top: 20em;
-  height: 75px;
+  min-height: 75px;
   padding: 60px 25px;
   background: rgb(111, 190, 91);
   color: white;
