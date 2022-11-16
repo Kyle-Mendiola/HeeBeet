@@ -1,26 +1,39 @@
 function main() {
   $(document).ready(() => {
-    document.getElementById("text-manipulators").appendChild(Canvas({ appName: "Scrambler" }))
-    $("button.scramble").click(() => {
-      const input = $(".canvas .text-input").val()
 
-      // Default output is the input
-      $("span.output").html(input)
+    const textCanvas = TextCanvas({ 
+      appName: "Scrambler", 
+      btnAttr: { 
+        class: "scramble",
+        onclick: scrambleHandler,
+        text: "Scramble"
+      } 
+    })
 
-      if (input.length === 0) {
-        console.log("Empty");
-        return
-      }
-      if (isOneCharString(input)) {
-        console.log("Is one char");
-        return
-      }
-
-      const output = shuffleString(input)
-
-      $("span.output").html(output)
-    });
+    $("button.scrambler.widget").click(() => {
+      $("#text-manipulators .canvas").toggle()
+    })
+    $(".section-title").after(textCanvas)
+    // document.getElementById("text-manipulators").prepend(textCanvas)
   });
+}
+
+function scrambleHandler() {
+  const input = $(".canvas .text-input").val()
+
+  // Default output is the input
+  $("span.output").text(input)
+
+  if (input.length === 0) {
+    return
+  }
+  if (isOneCharString(input)) {
+    return
+  }
+
+  const output = shuffleString(input)
+
+  $("span.output").text(output)
 }
 
 main();
