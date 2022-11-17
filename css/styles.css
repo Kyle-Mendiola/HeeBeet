@@ -49,9 +49,11 @@ p.section-title {
 }
 
 div.section-widgets {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-auto-rows: 150px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	row-gap: 20px;
+	margin-top: 20px;
+	column-gap: 10px;
 }
 
 .widget {
@@ -59,15 +61,21 @@ div.section-widgets {
   flex-direction: column;
   justify-content: center;
   border-radius: 10px;
-  margin: 0 auto;
+}
+
+.widget:hover .icon{
+  background: rgb(86, 187, 61);
 }
 
 button.widget {
   background: rgb(125, 172, 113);
+  width: 100%;
+  height: 100%;
   border: none;
   font-size: 16px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   cursor: pointer;
+  align-self: baseline;
 }
 
 a.widget {
@@ -75,15 +83,28 @@ a.widget {
 }
 
 .widget .icon {
-  background: white;
-  width: 50px;
+  background: rgb(111, 190, 91);
   height: 50px;
-  margin: 0 auto;
+  border-radius: 10px 10px 0 0;
+  outline: 1px solid #cccccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .widget .widget-name {
   text-align: center;
   color: white;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.widget .widget-body {
+  height: 60px;
+  padding: 0.5em 0;
+  outline: 1px solid #cccccc;
+  border-radius: 0 0 10px 10px;
+  background-color: #d9ffcf;
 }
 
 footer{
