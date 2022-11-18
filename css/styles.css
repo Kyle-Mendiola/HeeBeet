@@ -35,6 +35,13 @@ div.landing-div {
   height: 70vh;
 }
 
+@media (max-width: 400px) {
+  div.landing-div p{
+    margin: 0 1em;
+  }
+}
+
+
 div.landing-div p {
   color: white;
 }
