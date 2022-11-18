@@ -46,6 +46,7 @@ p.section-title {
   padding-bottom: 10px;
   margin: 10px 20px;
   text-align: center;
+  font-size: 1.2em;
 }
 
 div.section-widgets {
@@ -90,6 +91,7 @@ a.widget {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .widget .widget-name {
