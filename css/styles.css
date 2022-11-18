@@ -6,9 +6,17 @@
 
 html,
 body {
+  
+  background-color: rgb(125, 172, 113);
+}
+
+p,
+button,
+span,
+input {
+  font-size: 18px;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background-color: rgb(125, 172, 113);
 }
 
 p.title {
@@ -50,11 +58,11 @@ p.section-title {
 }
 
 div.section-widgets {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-	row-gap: 20px;
-	margin-top: 20px;
-	column-gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  row-gap: 20px;
+  margin-top: 20px;
+  column-gap: 10px;
 }
 
 .widget {
@@ -64,7 +72,7 @@ div.section-widgets {
   border-radius: 10px;
 }
 
-.widget:hover .icon{
+.widget:hover .icon {
   background: rgb(86, 187, 61);
 }
 
@@ -109,7 +117,7 @@ a.widget {
   background-color: #d9ffcf;
 }
 
-footer{
+footer {
   margin-top: 20em;
   min-height: 75px;
   padding: 60px 25px;
@@ -117,12 +125,12 @@ footer{
   color: white;
 }
 
-footer p{
+footer p {
   font-size: 1.5em;
   font-weight: bold;
 }
 
-footer a{
+footer a {
   position: relative;
   display: block;
   margin: 10px auto;
@@ -130,7 +138,7 @@ footer a{
   color: white;
 }
 
-footer a img{
+footer a img {
   background-color: white;
   width: 20px;
   border-radius: 50%;
