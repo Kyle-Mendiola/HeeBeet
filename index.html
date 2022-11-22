@@ -27,7 +27,10 @@
             <p class="widget-name">Scrambler</p>
           </div>
           <div class="widget-body">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia, quia.</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia,
+              quia.
+            </p>
           </div>
         </button>
         <button class="scrambler widget">
@@ -35,7 +38,10 @@
             <p class="widget-name">Case</p>
           </div>
           <div class="widget-body">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia, quia.</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia,
+              quia.
+            </p>
           </div>
         </button>
         <button class="scrambler widget">
@@ -43,10 +49,54 @@
             <p class="widget-name">Encode</p>
           </div>
           <div class="widget-body">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia, quia.</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia,
+              quia.
+            </p>
           </div>
         </button>
       </div>
+    </div>
+    <div class="section" id="filler-section">
+      <p class="section-title">Filler section</p>
+      <div class="section-widgets"></div>
+    </div>
+    <script>
+      const showDebugScreen = () => {
+        const width =
+          window.innerWidth ||
+          document.documentElement.clientWidth ||
+          document.body.clientWidth;
+        const height =
+          window.innerHeight ||
+          document.documentElement.clientHeight ||
+          document.body.clientHeight;
+        $("#debug").toggle()
+        $("#debug p.width").text(width);
+        $("#debug p.height").text(height);
+      };
+    </script>
+    <button onclick="showDebugScreen()">Debugging Info</button>
+    <div
+      id="debug"
+      style="
+        background-color: #cccccc;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        -moz-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+        z-index: 100;
+        padding: 3em;
+        display: none;
+      "
+    >
+      Width:
+      <p class="width">---</p>
+      Height:
+      <p class="height">---</p>
+      <button onclick="showDebugScreen()">Close</button>
     </div>
     <footer>
       <p>Credits:</p>
@@ -54,7 +104,7 @@
         href="https://www.flaticon.com/free-icons/letter-h"
         title="letter h icons"
       >
-      <img src="favicon.png" />Website icon : Letter h icons created by Agung
+        <img src="favicon.png" />Website icon : Letter h icons created by Agung
         Rama - Flaticon</a
       >
     </footer>

@@ -18,10 +18,16 @@ function TextCanvas(props){
     const canvas = Canvas(props)
 
     // Input element
-    const input = document.createElement("input")
-    input.setAttribute("class", "text-input")
-    input.setAttribute("type", "text")
-    input.setAttribute("placeholder", "Input your text here")
+    // const input = document.createElement("input")
+    const input = createElement("input", {
+        class: "text-input",
+        type: "text",
+        placeholder: "Input your text here"
+    })
+
+    // input.setAttribute("class", "text-input")
+    // input.setAttribute("type", "text")
+    // input.setAttribute("placeholder", "Input your text here")
 
     canvas.appendChild(input)
 

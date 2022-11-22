@@ -36,11 +36,10 @@ div.landing-div {
 }
 
 @media (max-width: 400px) {
-  div.landing-div p{
+  div.landing-div p {
     margin: 0 1em;
   }
 }
-
 
 div.landing-div p {
   color: white;
@@ -114,11 +113,13 @@ a.widget {
 }
 
 .widget .widget-body {
+  box-sizing: border-box;
   height: 60px;
-  padding: 0.5em 0;
+  padding: 0.5em 0.2em;
   outline: 1px solid #cccccc;
   border-radius: 0 0 10px 10px;
   background-color: #d9ffcf;
+  overflow-y: hidden;
 }
 
 footer {

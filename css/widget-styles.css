@@ -1,4 +1,5 @@
 .canvas {
+  display: none;
   background: white;
   height: 30vh;
   padding: 10px;
