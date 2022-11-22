@@ -20,22 +20,23 @@ function main() {
       $(this).children(".widget-body").animate({
         scrollTop: maxscroll
       }, speed, "linear");
-      $(this).children(".widget-body").animate({
-        scrollTop: maxscroll
-      }, 2000);
-      $(this).children(".widget-body").animate({
-        scrollTop: 0
-      }, speed, "linear");
-      $(this).children(".widget-body").animate({
-        scrollTop: 0
-      }, 2000);
+      // $(this).children(".widget-body").animate({
+      //   scrollTop: maxscroll
+      // }, 2000);
+      // $(this).children(".widget-body").animate({
+      //   scrollTop: 0
+      // }, speed, "linear");
+      // $(this).children(".widget-body").animate({
+      //   scrollTop: 0
+      // }, 2000);
     });
 
     $(".widget").mouseout(function () {
-      $(this).children(".widget-body").stop();
-      $(this).children(".widget-body").animate({
-        scrollTop: 0
-      }, 0);
+      $(this).children(".widget-body").stop(true);
+      $(this).children(".widget-body").scrollTop(0)
+      // $(this).children(".widget-body").animate({
+      //   scrollTop: 0
+      // }, 0);
     });
 
     $("#text-manipulators .section-title").after(textCanvas)

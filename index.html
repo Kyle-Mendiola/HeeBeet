@@ -11,6 +11,7 @@
   </head>
   <body>
     <script src="./js/jquery.js"></script>
+    <script src="./js/jquery-extend.js"></script>
     <script src="./js/utils.js"></script>
     <script src="./js/components.js"></script>
     <script src="./js/script.js"></script>
@@ -74,6 +75,7 @@
         $("#debug").toggle()
         $("#debug p.width").text(width);
         $("#debug p.height").text(height);
+        $("#debug p.font").text($("p.title").detectFont());
       };
     </script>
     <button onclick="showDebugScreen()">Debugging Info</button>
@@ -90,12 +92,15 @@
         z-index: 100;
         padding: 3em;
         display: none;
+        text-align: center;
       "
     >
       Width:
       <p class="width">---</p>
       Height:
       <p class="height">---</p>
+      Font:
+      <p class="font">---</p>
       <button onclick="showDebugScreen()">Close</button>
     </div>
     <footer>
