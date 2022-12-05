@@ -6,31 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/widget-styles.css" />
+    <link rel="stylesheet" href="./css/misc.css" />
     <link rel="shortcut icon" href="./favicon.png" type="image/x-icon" />
     <title>Heebeet</title>
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Fira+Sans">
-
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans"
+    />
   </head>
   <body>
     <script src="./js/jquery.js"></script>
     <script src="./js/jquery-extend.js"></script>
     <script src="./js/utils.js"></script>
     <script src="./js/components.js"></script>
+    <script src="/js/debug.js"></script>
     <script src="./js/script.js"></script>
-    <p class="title">HEEBEET</p>
-    <div class="landing-div">
+    <nav>
+      <p class="title">HEEBEET</p>
+    </nav>
+    <header>
       <p>Welcome to HeeBeet!</p>
       <p>Scroll down to try out my selection of widgets</p>
-    </div>
-    <div class="section" id="text-manipulators">
+    </header>
+    <section id="text-manipulators">
       <p class="section-title">Text manipulators</p>
       <div class="section-widgets">
         <button class="scrambler widget">
           <div class="icon">
             <p class="widget-name">Scrambler</p>
           </div>
-          <div class="widget-body">
+          <div class="widget-body" tabindex="1">
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia,
               quia.
@@ -41,7 +46,7 @@
           <div class="icon">
             <p class="widget-name">Case</p>
           </div>
-          <div class="widget-body">
+          <div class="widget-body" tabindex="1">
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia,
               quia.
@@ -52,7 +57,7 @@
           <div class="icon">
             <p class="widget-name">Encode</p>
           </div>
-          <div class="widget-body">
+          <div class="widget-body" tabindex="1">
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia,
               quia.
@@ -60,52 +65,24 @@
           </div>
         </button>
       </div>
-    </div>
-    <div class="section" id="filler-section">
+    </section>
+    <section id="filler-section">
       <p class="section-title">Filler section</p>
-      <div class="section-widgets"></div>
-    </div>
-    <script>
-      const showDebugScreen = () => {
-        const width =
-          window.innerWidth ||
-          document.documentElement.clientWidth ||
-          document.body.clientWidth;
-        const height =
-          window.innerHeight ||
-          document.documentElement.clientHeight ||
-          document.body.clientHeight;
-        $("#debug").toggle()
-        $("#debug p.width").text(width);
-        $("#debug p.height").text(height);
-        $("#debug p.font").text($("p.title").detectFont());
-      };
-    </script>
-    <button onclick="showDebugScreen()">Debugging Info</button>
-    <div
-      id="debug"
-      style="
-        background-color: #cccccc;
-        position: fixed;
-        left: 50%;
-        top: 50%;
-        -webkit-transform: translateX(-50%) translateY(-50%);
-        -moz-transform: translateX(-50%) translateY(-50%);
-        transform: translateX(-50%) translateY(-50%);
-        z-index: 100;
-        padding: 3em;
-        display: none;
-        text-align: center;
-      "
-    >
-      Width:
-      <p class="width">---</p>
-      Height:
-      <p class="height">---</p>
-      Font:
-      <p class="font">---</p>
-      <button onclick="showDebugScreen()">Close</button>
-    </div>
+      <div class="section-widgets">
+        <button class="scrambler widget">
+          <div class="icon">
+            <p class="widget-name">Filler App</p>
+          </div>
+          <div class="widget-body" tabindex="1">
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia,
+              quia.
+            </p>
+          </div>
+        </button>
+      </div>
+    </section>
+    <button id="debug-btn" onclick="showDebugScreen()">D</button>
     <footer>
       <p>Credits:</p>
       <a

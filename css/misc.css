@@ -1,0 +1,22 @@
+#debug {
+  background-color: #cccccc;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 100;
+  padding: 3em;
+  display: none;
+  text-align: center;
+}
+
+#debug-btn {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  border-radius: 50%;
+  opacity: 75%;
+}
