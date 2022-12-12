@@ -1,3 +1,5 @@
+import { createElement } from "./utils.js"
+
 function DebugScreen() {
   const debugScreen = createElement("div", { id: "debug" })
 
@@ -32,3 +34,5 @@ function showDebugScreen() {
   $("#debug p.height").text(height);
   $("#debug p.font").text($("p.title").detectFont());
 };
+
+export { showDebugScreen, DebugScreen }

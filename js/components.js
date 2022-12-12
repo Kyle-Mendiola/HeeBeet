@@ -1,3 +1,5 @@
+import { createElement } from "./utils.js"
+
 function Canvas(props) {
     const canvas = document.createElement("div")
 
@@ -55,4 +57,8 @@ function TextCanvas(props){
     canvas.appendChild(outputP)
 
     return canvas
+}
+
+export {
+    TextCanvas
 }

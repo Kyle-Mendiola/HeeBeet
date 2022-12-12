@@ -17,10 +17,7 @@
   <body>
     <script src="./js/jquery.js"></script>
     <script src="./js/jquery-extend.js"></script>
-    <script src="./js/utils.js"></script>
-    <script src="./js/components.js"></script>
-    <script src="./js/debug.js"></script>
-    <script src="./js/script.js"></script>
+    <script type="module" src="./js/script.js"></script>
     <nav>
       <p class="title">HEEBEET</p>
     </nav>
@@ -37,8 +34,8 @@
           </div>
           <div class="widget-body" tabindex="1">
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia,
-              quia.
+              Lets you input a string of characters and the widget will
+              rearrange their order.
             </p>
           </div>
         </button>
@@ -56,6 +53,17 @@
         <button class="scrambler widget">
           <div class="icon">
             <p class="widget-name">Encode</p>
+          </div>
+          <div class="widget-body" tabindex="1">
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia,
+              quia.
+            </p>
+          </div>
+        </button>
+        <button class="scrambler widget">
+          <div class="icon">
+            <p class="widget-name">Filler App</p>
           </div>
           <div class="widget-body" tabindex="1">
             <p>
@@ -82,7 +90,6 @@
         </button>
       </div>
     </section>
-    <button id="debug-btn" onclick="showDebugScreen()">D</button>
     <footer>
       <p>Credits:</p>
       <a
@@ -93,5 +100,6 @@
         Rama - Flaticon</a
       >
     </footer>
+    <button id="debug-btn">D</button>
   </body>
 </html>

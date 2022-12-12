@@ -40,3 +40,9 @@ function createElement(element, attrs) {
 
   return elem
 }
+
+export {
+  isOneCharString,
+  createElement,
+  shuffleString
+}

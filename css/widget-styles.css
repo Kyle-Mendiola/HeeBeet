@@ -1,7 +1,7 @@
 .canvas {
   display: none;
   background: white;
-  height: 30vh;
+  min-height: 30vh;
   padding: 10px;
   border-radius: 5px;
   outline: 3px solid rgb(111, 190, 91);

@@ -1,3 +1,7 @@
+import { TextCanvas } from "./components.js"
+import { showDebugScreen, DebugScreen } from "./debug.js"
+import { shuffleString, isOneCharString } from "./utils.js"
+
 function main() {
   $(document).ready(() => {
 
@@ -30,15 +34,14 @@ function main() {
     $("#text-manipulators .section-title").after(textCanvas)
 
     // Debug Related
-    document.body.appendChild(DebugScreen())
+    $("body").append(DebugScreen())
     $("p.title").dblclick(showDebugScreen)
+    $("button#debug-btn").click(showDebugScreen)
   });
 }
 
 function scrambleHandler() {
   const input = $(".canvas .text-input").val()
-
-  console.log("hello");
 
   // Default output is the input
   $("span.output").text(input)
