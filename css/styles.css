@@ -120,6 +120,7 @@ a.widget {
   background-color: #d9ffcf;
   overflow-y: hidden;
   pointer-events: none;
+  width: 100%;
 }
 
 .widget:hover .widget-body p {
