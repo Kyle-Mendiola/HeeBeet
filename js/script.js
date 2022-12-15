@@ -1,61 +1,40 @@
-import { TextCanvas } from "./components.js"
+import { renderScrambleCanvas } from "./components.js"
 import { showDebugScreen, DebugScreen } from "./debug.js"
-import { shuffleString, isOneCharString } from "./utils.js"
+import { gradualYScroll, resetScroll } from "./animations.js"
+import { scrambleInputIsValid } from "./validations.js"
 
 function main() {
   $(document).ready(() => {
-
-    const textCanvas = TextCanvas({
-      appName: "Scrambler",
-      btnAttr: {
-        class: "scramble",
-        onclick: scrambleHandler,
-        text: "Scramble"
-      }
+    $("button.widget").click(() => {
+      renderScrambleCanvas()
     })
 
-    $("button.scrambler.widget").click(() => {
-      $("#text-manipulators .canvas").toggle()
-    })
-
-    $(".widget").mouseover(function () {
-      const maxscroll = $(this).children(".widget-body").height();
-      const speed = maxscroll * 50;
-      $(this).children(".widget-body").animate({
-        scrollTop: maxscroll,
-      }, speed, "linear");
-    });
-
-    $(".widget").mouseout(function () {
-      $(this).children(".widget-body").stop(true);
-      $(this).children(".widget-body").scrollTop(0)
-    });
-
-    $("#text-manipulators .section-title").after(textCanvas)
+    $(".widget").mouseover(widgetMouseoverHandler);
+    $(".widget").mouseout(widgetMouseoutHandler);
 
     // Debug Related
     $("body").append(DebugScreen())
-    $("p.title").dblclick(showDebugScreen)
     $("button#debug-btn").click(showDebugScreen)
   });
 }
 
 function scrambleHandler() {
   const input = $(".canvas .text-input").val()
+  const output = scrambleInputIsValid(input)
+    ? shuffleString(input)
+    : input
 
-  // Default output is the input
-  $("span.output").text(input)
+  $(".canvas p.text-output").text(output)
+}
 
-  if (input.length === 0) {
-    return
-  }
-  if (isOneCharString(input)) {
-    return
-  }
+function widgetMouseoverHandler(e) {
+  const widgetBody = $(e.target).children(".widget-body")
+  gradualYScroll(widgetBody, 40)
+}
 
-  const output = shuffleString(input)
-
-  $("span.output").text(output)
+function widgetMouseoutHandler(e) {
+  const widgetBody = $(e.target).children(".widget-body")
+  resetScroll(widgetBody)
 }
 
 main();

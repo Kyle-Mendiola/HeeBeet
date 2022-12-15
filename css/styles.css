@@ -97,7 +97,7 @@ a.widget {
   background: rgb(111, 190, 91);
   height: 50px;
   border-radius: 10px 10px 0 0;
-  outline: 1px solid #cccccc;
+  outline: 1px solid #92c186;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -115,16 +115,12 @@ a.widget {
 .widget .widget-body {
   box-sizing: border-box;
   height: 60px;
-  outline: 1px solid #cccccc;
+  outline: 1px solid #92c186;
   border-radius: 0 0 10px 10px;
   background-color: #d9ffcf;
   overflow-y: hidden;
   pointer-events: none;
   width: 100%;
-}
-
-.widget:hover .widget-body p {
-  display: block;
 }
 
 .widget .widget-body p {
@@ -135,6 +131,11 @@ a.widget {
   -webkit-box-orient: vertical;
   margin: 0.2em;
   line-height: 25px;
+  color: #115107;
+}
+
+.widget:hover .widget-body p {
+  display: block;
 }
 
 footer {

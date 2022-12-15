@@ -1,23 +1,49 @@
 .canvas {
-  display: none;
-  background: white;
   min-height: 30vh;
-  padding: 10px;
+  width: 100%;
+  background: white;
+  display: flex;
   border-radius: 5px;
   outline: 3px solid rgb(111, 190, 91);
 }
-
-.canvas .text-input {
-  display: block;
-  margin: 10px auto;
+.canvas div {
+  min-height: 15vh;
+  min-width: 50%;
   text-align: center;
 }
-
-.canvas button.scramble {
-  display: block;
-  margin: 10px auto;
+.canvas .input,
+.canvas .output {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.canvas .output {
+  position: relative;
+  border-left: 1px solid gray;
 }
 
-.canvas p.output{
-    text-align: center;
+.canvas .output::before {
+  content: "Output";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.canvas .text-input{
+  margin-bottom: 10px;
+}
+
+@media (max-width: 500px) {
+  .canvas {
+    flex-direction: column;
+  }
+  .canvas .input {
+    min-height: 20vh;
+  }
+  .canvas .output {
+    border-left: none;
+    border-top: 1px solid gray;
+    min-height: 10vh;
+  }
 }

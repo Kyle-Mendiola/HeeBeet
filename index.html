@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="./css/misc.css" />
     <link rel="shortcut icon" href="./favicon.png" type="image/x-icon" />
     <title>Heebeet</title>
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Fira+Sans"
-    />
+    /> -->
   </head>
   <body>
     <script src="./js/jquery.js"></script>
@@ -27,6 +27,14 @@
     </header>
     <section id="text-manipulators">
       <p class="section-title">Text manipulators</p>
+      <div class="canvas">
+        <div class="input">
+          <p> Pick a widget below</p>
+        </div>
+        <div class="output">
+          <p class="text-output">---</p>
+        </div>
+      </div>
       <div class="section-widgets">
         <button class="scrambler widget">
           <div class="icon">
@@ -77,6 +85,17 @@
     <section id="filler-section">
       <p class="section-title">Filler section</p>
       <div class="section-widgets">
+        <button class="scrambler widget">
+          <div class="icon">
+            <p class="widget-name">Filler App</p>
+          </div>
+          <div class="widget-body" tabindex="1">
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia,
+              quia.
+            </p>
+          </div>
+        </button>
         <button class="scrambler widget">
           <div class="icon">
             <p class="widget-name">Filler App</p>
