@@ -17,21 +17,18 @@ function Canvas(props) {
     return canvas
 }
 
-export function renderScrambleCanvas(props) {
+export function renderScrambleCanvas() {
     resetCanvas()
 
-    $(".canvas .input").append(createElement("input", { 
-        type: "text",
+    $(".canvas .input").append(createElement("textarea", { 
+        spellcheck: "false",
         class: "text-input"
     }))
 
     const button = createElement("button", { class: "scramble" })
     button.innerHTML = "Scramble"
     button.addEventListener("click", scrambleHandler)
-    console.log(button);
     $(".canvas .input").append(button)
-
-
 }
 
 function resetCanvas(options = { initial: false }) {

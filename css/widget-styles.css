@@ -21,6 +21,7 @@
 .canvas .output {
   position: relative;
   border-left: 1px solid gray;
+  max-width: 98%;
 }
 
 .canvas .output::before {
@@ -31,7 +32,28 @@
 }
 
 .canvas .text-input{
+  width: 80%;
+  height: 40%;
+  resize: none;
   margin-bottom: 10px;
+  font-size: 1.2em;
+  font-family: "Fira Sans";
+}
+
+.canvas button {
+	background: #7cca68;
+	border-radius: 10px;
+	padding: 5px;
+	color: white;
+}
+
+.canvas p.text-output{
+  max-width: 96%;
+  overflow-wrap: break-word;
+}
+
+.canvas p.text-output:empty::before{
+  content: "---";
 }
 
 @media (max-width: 500px) {
@@ -45,5 +67,11 @@
     border-left: none;
     border-top: 1px solid gray;
     min-height: 10vh;
+  }
+  .canvas p {
+    margin: 35px 0;
+  }
+  .canvas .text-input{
+    height: 10vh;
   }
 }
