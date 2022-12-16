@@ -12,7 +12,9 @@ body {
 p,
 button,
 span,
-input {
+input,
+::before,
+textarea {
   font-size: 18px;
   font-family: "Fira Sans";
 }
@@ -74,6 +76,10 @@ div.section-widgets {
   flex-direction: column;
   justify-content: center;
   border-radius: 10px;
+}
+
+.widget:hover{
+  box-shadow: 0 0 10px #31442c;
 }
 
 .widget:hover .icon {
