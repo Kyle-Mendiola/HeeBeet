@@ -1,26 +1,10 @@
-import { shuffleString, createElement } from "./utils.js"
-import { scrambleInputIsValid } from "./validations.js"
-
-function Canvas(props) {
-    const canvas = document.createElement("div")
-
-    canvas.classList.add("canvas")
-
-    const appName = document.createElement("p")
-    const appNameText = document.createTextNode(props?.appName || "")
-
-    appName.classList.add("name")
-    appName.appendChild(appNameText)
-
-    canvas.appendChild(appName)
-
-    return canvas
-}
+import { shuffleString, createElement } from "../../utils.js"
+import { scrambleInputIsValid } from "../../validations.js"
 
 export function renderScrambleCanvas() {
     resetCanvas()
 
-    $(".canvas .input").append(createElement("textarea", { 
+    $(".canvas .input").append(createElement("textarea", {
         spellcheck: "false",
         class: "text-input"
     }))
@@ -45,8 +29,8 @@ function resetCanvas(options = { initial: false }) {
 function scrambleHandler() {
     const input = $(".canvas .text-input").val()
     const output = scrambleInputIsValid(input)
-      ? shuffleString(input)
-      : input
-  
+        ? shuffleString(input)
+        : input
+
     $(".canvas p.text-output").text(output)
-  }
+}

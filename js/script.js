@@ -1,12 +1,15 @@
-import { renderScrambleCanvas } from "./components.js"
+import { renderScrambleCanvas } from "./components/scrambleCanvas/index.js"
 import { showDebugScreen, DebugScreen } from "./debug.js"
 import { gradualYScroll, resetScroll } from "./animations.js"
-import { scrambleInputIsValid } from "./validations.js"
 
 function main() {
   $(document).ready(() => {
-    $("button.widget").click(() => {
+    $("button.scrambler.widget").click(() => {
       renderScrambleCanvas()
+    })
+    
+    $("button.widget:not(.scrambler)").click(() => {
+      alert("Coming soon")
     })
 
     $(".widget").mouseover(widgetMouseoverHandler);
