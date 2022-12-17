@@ -19,6 +19,10 @@ textarea {
   font-family: "Fira Sans";
 }
 
+button {
+  cursor: pointer;
+}
+
 p.title {
   background-color: rgb(114, 231, 85);
   font-size: 2em;
@@ -78,7 +82,7 @@ div.section-widgets {
   border-radius: 10px;
 }
 
-.widget:hover{
+.widget:hover {
   box-shadow: 0 0 10px #31442c;
 }
 
@@ -91,7 +95,6 @@ button.widget {
   width: 100%;
   height: 100%;
   border: none;
-  cursor: pointer;
   align-self: baseline;
 }
 
