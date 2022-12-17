@@ -18,15 +18,6 @@ function main() {
   });
 }
 
-function scrambleHandler() {
-  const input = $(".canvas .text-input").val()
-  const output = scrambleInputIsValid(input)
-    ? shuffleString(input)
-    : input
-
-  $(".canvas p.text-output").text(output)
-}
-
 function widgetMouseoverHandler(e) {
   const widgetBody = $(e.target).children(".widget-body")
   gradualYScroll(widgetBody, 40)
