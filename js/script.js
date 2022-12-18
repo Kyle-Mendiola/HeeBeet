@@ -1,7 +1,7 @@
 import { renderScrambleCanvas } from "./components/scrambleCanvas/index.js"
-import { showDebugScreen, DebugScreen } from "./debug.js"
+import { modifyCSSSelector, getGlobalWidgetWidth, getAllSmallWidgetSections } from "./utils.js";
 import { gradualYScroll, resetScroll } from "./animations.js"
-import { getGlobalWidgetWidth, getAllSmallWidgetSections } from "./utils.js";
+import { showDebugScreen, DebugScreen } from "./debug.js"
 
 function main() {
   $(document).ready(() => {
@@ -16,7 +16,11 @@ function main() {
     $(".widget").mouseover(widgetMouseoverHandler);
     $(".widget").mouseout(widgetMouseoutHandler);
 
+
     windowResizeHandler()
+    getAllSmallWidgetSections().forEach(section => {
+      $(section).addClass("small-section")
+    })
     $(window).resize(windowResizeHandler)
 
     // Debug Related
@@ -39,11 +43,9 @@ function widgetMouseoutHandler(e) {
 
 function windowResizeHandler() {
   getAllSmallWidgetSections().forEach(section => {
-    $(section).addClass("small-section")
-    const stylesCss = document.styleSheets[0]
-    const rules = stylesCss.cssRules || stylesCss.rules
-
-    rules[13].style["flex-basis"] = getGlobalWidgetWidth() + "px"
+    modifyCSSSelector("styles.css", "div.section-widgets.small-section .widget", {
+      "flex-basis": getGlobalWidgetWidth() + "px"
+    })
   })
 }
 

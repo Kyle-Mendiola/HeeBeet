@@ -40,12 +40,6 @@ header {
   height: 70vh;
 }
 
-@media (max-width: 400px) {
-  header p {
-    margin: 0 1em;
-  }
-}
-
 header p {
   color: white;
 }
@@ -53,6 +47,13 @@ header p {
 header p:first-child {
   font-size: 3em;
 }
+
+@media (max-width: 400px) {
+  header p {
+    margin: 0 1em;
+  }
+}
+
 
 section {
   margin: 0 2%;
@@ -81,7 +82,7 @@ div.section-widgets.small-section{
 }
 
 div.section-widgets.small-section .widget{
-  flex-basis: 40%;
+  flex-basis: 100%;
 }
 
 .widget {
@@ -186,3 +187,13 @@ footer a img {
   top: 2px;
   left: -25px;
 }
+
+@media (max-width: 427px) {
+  div.section-widgets.small-section {
+    flex-direction: column;
+  }
+  div.section-widgets.small-section .widget{
+    flex-basis: auto;
+  }
+}
+
