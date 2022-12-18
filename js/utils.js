@@ -41,8 +41,42 @@ function createElement(element, attrs) {
   return elem
 }
 
+function getAllSmallWidgetSections(){
+  const sections = document.querySelectorAll(".section-widgets")
+
+  const smallSections = []
+
+  sections.forEach(section => {
+    if(section.childElementCount < 4){
+      smallSections.push(section)
+    }
+  })
+
+  return smallSections
+}
+
+const getCompleteSection = () => {
+  const sections = document.querySelectorAll(".section-widgets")
+
+  let completeSection
+
+  sections.forEach(sec => {
+    if(sec.childElementCount >= 4){
+      completeSection = sec
+    }
+  })
+
+  return completeSection
+}
+
+const getGlobalWidgetWidth = () => {
+  return $(getCompleteSection().firstElementChild).width()
+}
+
 export {
   isOneCharString,
   createElement,
-  shuffleString
+  shuffleString,
+  getAllSmallWidgetSections,
+  getGlobalWidgetWidth
 }
