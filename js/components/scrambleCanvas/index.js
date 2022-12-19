@@ -2,6 +2,12 @@ import { shuffleString, createElement } from "../../utils.js"
 import { scrambleInputIsValid } from "../../validations.js"
 
 export function renderScrambleCanvas() {
+    if($(".canvas").hasClass("scrambler")){
+        return
+    }
+
+    $(".canvas").toggleClass("scrambler")
+
     resetCanvas()
 
     $(".canvas .input").append(createElement("textarea", {
@@ -15,7 +21,7 @@ export function renderScrambleCanvas() {
     $(".canvas .input").append(button)
 }
 
-function resetCanvas(options = { initial: false }) {
+export function resetCanvas(options = { initial: false }) {
     if (options.initial) {
         $(".canvas .input")[0].innerHTML = "<p>Pick a widget below</p>"
         $(".canvas .output")[0].innerHTML = "<p class='text-output'>---</p>"

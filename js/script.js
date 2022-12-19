@@ -1,7 +1,20 @@
-import { renderScrambleCanvas } from "./components/scrambleCanvas/index.js"
-import { modifyCSSSelector, getGlobalWidgetWidth, getAllSmallWidgetSections } from "./utils.js";
-import { gradualYScroll, resetScroll } from "./animations.js"
-import { showDebugScreen, DebugScreen } from "./debug.js"
+import {
+  renderScrambleCanvas,
+  resetCanvas
+} from "./components/scrambleCanvas/index.js"
+import {
+  modifyCSSSelector,
+  getGlobalWidgetWidth,
+  getAllSmallWidgetSections
+} from "./utils.js";
+import {
+  gradualYScroll,
+  resetScroll
+} from "./animations.js"
+import {
+  showDebugScreen,
+  DebugScreen
+} from "./debug.js"
 
 function main() {
   $(document).ready(() => {
@@ -10,6 +23,8 @@ function main() {
     })
 
     $("button.widget:not(.scrambler)").click(() => {
+      resetCanvas({ initial: true })
+      $(".canvas").attr("class", "canvas")
       alert("Coming soon")
     })
 
