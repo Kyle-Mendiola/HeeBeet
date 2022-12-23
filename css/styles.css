@@ -94,13 +94,6 @@ div.section-widgets.small-section .widget{
   flex-basis: 100%;
 }
 
-.widget {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border-radius: 10px;
-}
-
 .widget:hover {
   box-shadow: 0 0 10px #31442c;
 }
@@ -109,46 +102,35 @@ div.section-widgets.small-section .widget{
   background: rgb(86, 187, 61);
 }
 
-button.widget {
+.widget {
 	background: rgb(125, 172, 113);
-	width: 100%;
-	height: 100%;
-	align-self: baseline;
 	border: 2px solid rgb(103, 181, 83);
-}
-
-a.widget {
-  text-decoration: none;
+  border-radius: 10px;
 }
 
 .widget .icon {
   background: rgb(111, 190, 91);
   height: 50px;
   border-radius: 10px 10px 0 0;
-  outline: 1px solid #92c186;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   pointer-events: none;
 }
 
 .widget p.widget-name {
-  text-align: center;
   color: white;
   font-weight: bold;
   font-size: 1.5em;
 }
 
 .widget .widget-body {
-  box-sizing: border-box;
   height: 60px;
   outline: 1px solid #92c186;
   border-radius: 0 0 10px 10px;
   background-color: #d9ffcf;
   overflow-y: hidden;
   pointer-events: none;
-  width: 100%;
 }
 
 .widget .widget-body p {

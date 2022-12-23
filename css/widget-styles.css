@@ -1,10 +1,9 @@
 .canvas {
   min-height: 30vh;
-  width: 100%;
   background: white;
   display: flex;
   border-radius: 5px;
-  outline: 3px solid rgb(111, 190, 91);
+  border: 3px solid rgb(111, 190, 91);
 }
 .canvas div {
   min-height: 15vh;
@@ -17,11 +16,13 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  box-sizing: border-box;
+  padding: 5px;
 }
+
 .canvas .output {
   position: relative;
   border-left: 1px solid gray;
-  max-width: 98%;
 }
 
 .canvas .output::before {
@@ -31,18 +32,19 @@
   left: 10px;
 }
 
-.canvas .text-input{
+.canvas .text-input {
   width: 80%;
   height: 40%;
   resize: none;
   margin-bottom: 10px;
-  border:1px solid #8f8f9d;
+  padding: 5px;
+  border: 1px solid #8f8f9d;
   border-radius: 5px;
 }
 
-.canvas .text-input:focus{
+.canvas .text-input:focus {
   outline: none !important;
-  border:1px solid #7cca68;
+  border: 1px solid #7cca68;
   box-shadow: 0 0 10px #88c778;
 }
 
@@ -54,12 +56,12 @@
   border: 2px solid gray;
 }
 
-.canvas p.text-output{
+.canvas p.text-output {
   max-width: 96%;
   overflow-wrap: break-word;
 }
 
-.canvas p.text-output:empty::before{
+.canvas p.text-output:empty::before {
   content: "---";
 }
 
@@ -78,7 +80,7 @@
   .canvas p {
     margin: 35px 0;
   }
-  .canvas .text-input{
+  .canvas .text-input {
     height: 10vh;
   }
 }
